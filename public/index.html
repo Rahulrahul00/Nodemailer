@@ -34,17 +34,17 @@
     <div class="container">
         <div class="contact-form">
             <h1>Contact US</h1> <br>
-            <form action="">
+            <form action="/"  method="POST">
                 <label for="name">Name</label><br>
-                <input type="text"  id="name" placeholder="Enter your name" required><br><br><br>
+                <input type="text" name="nameofperson" id="name" placeholder="Enter your name" required><br><br><br>
 
                 <label for="email">Email</label><br>
-                <input type="email"  id="email" required placeholder="Enter your email"><br><br><br>
+                <input type="email"  id="email" name="username" required placeholder="Enter your email"><br><br><br>
 
                  <label for="message">Message</label><br> 
-                 <textarea name="" rows="5" id="message"></textarea><br><br>
+                 <textarea name="message" rows="5" id="message"  placeholder="Type your FeedBack"></textarea><br><br>
 
-                 <button type="button">Submit</button>
+                 <button type="submit">Submit</button>
             </form>
         </div>
     </div>
