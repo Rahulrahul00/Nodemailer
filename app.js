@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const { consumers } = require('nodemailer/lib/xoauth2');
 
 const app = express();
-const port = 4000;
+const port = 3000;
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));

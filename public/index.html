@@ -1,52 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nodejs and Nodemailer</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container{
-    position: relative;
+  <body>
+   
+      <!-- <div class="contact-form">
+        <h1>Contact US</h1>
+        <br />
+        <form action="/" method="POST">
+          <label for="name">Name</label><br />
+          <input
+            type="text"
+            name="nameofperson"
+            id="name"
+            placeholder="Enter your name"
+            required
+          /><br /><br /><br />
+
+          <label for="email">Email</label><br/>
+          <inputtype="email" id="email name="username" required placeholder="Enter your email"/><br /><br /><br />
+
+          <label for="message">Message</label><br />
+          <textarea
+            name="message" rows="10"id="message" placeholder="Type your FeedBack">
+          </textarea><br /><br/>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>  -->
     
-  }
-  .contact-form{
-   
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(50%);
-   
-}
-
-
-
-</style>
-<body>
-
     
     <div class="container">
-        <div class="contact-form">
-            <h1>Contact US</h1> <br>
-            <form action="/"  method="POST">
-                <label for="name">Name</label><br>
-                <input type="text" name="nameofperson" id="name" placeholder="Enter your name" required><br><br><br>
+      <div class="item">
+        <div class="contact">
+          <div class="first-text">Let's Get in Touch </div>
+          <img src="./images/—Pngtree—contact us flat design style_5874427.png" class=".image" alt="contact img">
 
-                <label for="email">Email</label><br>
-                <input type="email"  id="email" name="username" required placeholder="Enter your email"><br><br><br>
-
-                 <label for="message">Message</label><br> 
-                 <textarea name="message" rows="5" id="message"  placeholder="Type your FeedBack"></textarea><br><br>
-
-                 <button type="submit">Submit</button>
-            </form>
+          <div class="social-links">
+            <span class="secText">Connect with us : </span>
+            <ul class="social-media">
+              <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+              <li><a href="#"><i class='bx bxl-whatsapp' ></i></a></li>
+              <li><a href="#"><i class='bx bxl-instagram'></i></i></a></li>
+              <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+              
+            </ul>
+          </div>
         </div>
+
+        <div class="submit-form">
+          <h4 class="third-text">Contact Us</h4>
+          <form action="/" method="POST">
+            <div class="input-box">
+              <input type="text" class="input" name="nameofperson" required  autocomplete="off" autofocus>
+              <label for="">Name</label>
+              
+            </div>
+
+            <div class="input-box">
+              <input type="text" class="input" name="username" required autocomplete="off">
+              <label for="">Email</label>
+              
+            </div>
+
+            <div class="input-box">
+              <textarea name="message" id="message" cols="30" rows="10" class="input" required  ></textarea>
+              <label for="">Message</label>  
+            </div>
+
+           <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+
+      </div>
     </div>
-</body>
+  
+  </body>
 </html>
