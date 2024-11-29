@@ -20,6 +20,8 @@ app.get("/",(req, res)=>{
 app.post("/", (req, res)=>{
     const msg = req.body.message;
     const name = req.body.nameofperson;
+    const email = req.body.username;
+    const conNum = req.body.contactNum;
  const transporter = nodemailer.createTransport({
         service:'gmail',
         auth: {
@@ -28,23 +30,48 @@ app.post("/", (req, res)=>{
           },
  }) 
 
- const mailOption = {
+ //Email to Yourself
+
+ const mailToSelf = {
+    from : 'rahulcshaji007@gmail.com',
+    to : 'rahulcshaji007@gmail.com',
+    subject: `Feedback received from ${name}`,
+    text: `A new feedback message has been received:\n\n
+            Message:${msg}\n
+            Name: ${name}
+            Email Id: ${email}
+            Contact Number :${conNum}`,
+ };
+
+ //Email to user
+ 
+ const mailToUser = {
     from : 'rahulcshaji007@gmail.com',
     to : req.body.username,
-    cc :'rahulcshaji007@gmail.com',
-    subject: `Thanks for giving feedback ${name}`,
-    text: `Thanks for your message you have sent to us ${msg}`
+    subject:`Thanks for your feedback, ${name}`,
+    text: `Hi ${name}, \n\n Thank you for your valuable feedback!\n\n We appreciate your message:"${msg}"\n\n Best regards, \nTeam `,
  }
 
- transporter.sendMail(mailOption, (error, info)=>{
+ //sent email to yourself
+ transporter.sendMail(mailToSelf, (error, info)=>{
     if(error){
-        console.log(error);
+        console.log(`Error sending email to  self: ${error}`);
     }else{
-        res.redirect('/');
-        console.log(`email sent ${info.response}`)
+        
+        console.log(`Feedback email sent to self: ${info.response}`)
     }
 
- })
+ });
+
+ //sent email to the user
+ transporter.sendMail(mailToUser,(error,info)=>{
+    if(error){
+        console.log('Error sending email to user')
+    }else{
+        console.log(`Thank you email sent to user:${info.response}`);
+        res.redirect('/');//redirect to home page without reloading
+    }
+ });
     
    
 });

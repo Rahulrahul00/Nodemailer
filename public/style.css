@@ -26,8 +26,8 @@
   
   .item{
     width: 100%;
-    height: 450px;
-    max-width: 700px;
+    height: 500px;
+    max-width: 750px;
     background: #ffff;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
@@ -159,9 +159,94 @@ textarea.input{
   cursor: pointer;
   font-weight: 500;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: .3s;
+}
+.btn:hover{
+  transition: .3s;
+  background-color: #cbb6fc;
+  color: #1b0347;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
 }
 
 /* resposive */
+@media(max-width:850px){
+  .item{
+    grid-template-columns: 1fr;
+  }
+  .contact{
+    display: none;
+  }
+  .text{
+    font-size: 40px;
+    text-align: center;
+  }
+  .input-box{
+    height: 30px;
+    width: 100%;
+    
+  }
+  .btn{
+    font-size: 17px;
+    height: 35px;
+  }
+ 
+}
+
+@media(max-width:450px){
+  .item{
+    grid-template-columns: 1fr;
+  }
+  .contact{
+    display: none;
+  }
+  .text{
+    font-size: 28px;
+    text-align:start;
+  }
+  .input-box{
+    height: 30px;
+    width: 100%;
+    
+  }
+  .btn{
+    font-size: 15px;
+    height: 35px;
+  }
+ 
+}
+@media(max-width:376px){
+  .btn{
+    font-size: 14px;
+    width: 100%;
+  }
+  .input-box label{
+    font-size: 13px;
+  }
+  .text{
+      text-align: center;
+      margin-right: 50px;
+  }
+
+}
+
+@media(max-width:321px){
+  .btn{
+    font-size: 14px;
+    width: 100%;
+  }
+  .input-box label{
+    font-size: 13px;
+  }
+  .text{
+      text-align: center;
+      margin-right: 50px;
+  }
+
+}
+
+
+
 
 
 
